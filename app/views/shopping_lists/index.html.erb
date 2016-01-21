@@ -8,6 +8,18 @@
             <h2><%= shopping_list.name %></h2>
             <h4><%= shopping_list.description %></h4>
             <p>List ID: <%= shopping_list.id %></p>
+            <ul>
+                
+                <% items = shopping_list.items %>
+                
+                <%= "<h4>List:</h4>".html_safe if items.any? %>
+                
+                <% items.each do |item| %>
+                    <li><%= item.quantity %> <%= item.name %></li>
+                <% end %>
+                
+            
+            </ul>
             <ul class="nav nav-tabs nav-justified">
                 <li><%= link_to 'Show', shopping_list_path(shopping_list) %></li>
                 <li><%= link_to 'Edit', edit_shopping_list_path(shopping_list) %></li>
