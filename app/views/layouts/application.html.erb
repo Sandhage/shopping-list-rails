@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Home', root_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'New List', new_shopping_list_path %></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <%= yield %>
 
 </body>
 </html>
