@@ -5,6 +5,10 @@ html, body {
     height: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .list-counter {
     margin-bottom: 45px;
 }
@@ -14,8 +18,9 @@ html, body {
     background-color: #e8ecdb;
     margin-left: 25px;
     margin-right: 25px;
+    text-align: center;
     
-    h4, p {
+    p {
         margin-left: 25px;
     }    
     
@@ -23,4 +28,16 @@ html, body {
         background-color: #b1c4af;
         color: #f1f7f7;
     }
+}
+
+.hidden-form {
+    display: none;
+}
+
+.list-description {
+    font-style: oblique;
+}
+
+.add-item-button {
+    margin-left: 75px;
 }

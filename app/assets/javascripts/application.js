@@ -15,3 +15,12 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('.span-button').click(function() {
+    $('.span-button').hide();
+    $('.hidden-description').show();
+  });
+  
+  alert(gon.testVariable);
+});

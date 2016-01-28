@@ -22,11 +22,18 @@ test:
 
 production:
   adapter:  postgresql
-  host:     'ec2-184-73-253-4.compute-1.amazonaws.com'
-  port:     '5432'
-  database: 'de0ftg1a46fr1'
-  username: 'aatpixjwkfsamm'
-  password: 'FRtHe4wEFeuv-C3J9Ulxja1E08'
+  host:     <%= ENV['DATABASE_HOST'] %>
+  port:     <%= ENV['DATABASE_PORT'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   encoding: unicode
   pool:     5
   template: template0
+
+
+  # host:     'ec2-184-73-253-4.compute-1.amazonaws.com'
+  # port:     '5432'
+  # database: 'de0ftg1a46fr1'
+  # username: 'aatpixjwkfsamm'
+  # password: 'FRtHe4wEFeuv-C3J9Ulxja1E08'

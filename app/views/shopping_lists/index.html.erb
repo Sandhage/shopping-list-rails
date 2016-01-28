@@ -1,13 +1,12 @@
 <div class="container list-counter">
-    <h2>There are <%= @shopping_lists.count %> shopping lists</h2>
+    <h2>You have <%= @shopping_lists.count %> shopping lists</h2>
 </div>
 
 <div class="container">
     <% @shopping_lists.each do |shopping_list| %>
-        <div class="container list-container col-sm-10 col-md-3 col-lg-3">
+        <div class="container list-container col-sm-10 col-md-4 col-lg-3">
             <h2><%= shopping_list.name %></h2>
-            <h4><%= shopping_list.description %></h4>
-            <p>List ID: <%= shopping_list.id %></p>
+            <p class="list-description"><%= shopping_list.description %></p>
             <ul>
                 
                 <% items = shopping_list.items %>

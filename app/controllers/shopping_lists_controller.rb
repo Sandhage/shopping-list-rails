@@ -6,6 +6,8 @@ class ShoppingListsController < ApplicationController
     
   def show
     @shopping_list = ShoppingList.find_by_id(params[:id])
+    
+    gon.testVariable = Item.all
   end
   
   def new
