@@ -21,6 +21,4 @@ $(document).ready(function() {
     $('.span-button').hide();
     $('.hidden-description').show();
   });
-  
-  alert(gon.testVariable);
 });
